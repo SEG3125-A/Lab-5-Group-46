@@ -1,0 +1,86 @@
+
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+/* Bootstrap default font-family is Helvetica Neue */
+
+.custom-bg-color {
+    background-color: #8B0000;
+}
+
+.custom-bg-color2 {
+    background-color: #ffffff;
+}
+
+.table.table-primary {
+    background-color: #ffffff;
+    border: 2px solid #000000; /* Change this to the desired border color and width */
+}
+
+.table.table-primary th,
+.table.table-primary td {
+    border: 2px solid #000000; /* Change this to the desired border color and width */
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 3px 3px 1px black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.h1-container p {
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 1px black;
+}
+
+.navbar-items{
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: smaller;
+    
+}
+
+.logo.image img{
+    display: block;
+    margin: 0 auto;
+    height: 500px;
+    width: 40%;
+    filter: contrast(110);
+}
+
+h3 {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+
+.h3-container p {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.h3-container p1{
+    color: black;
+}
+
+.h3-container p2{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.h3-container p3{
+    color: black;
+}
+
+h2{
+    color: black;
+}
+
