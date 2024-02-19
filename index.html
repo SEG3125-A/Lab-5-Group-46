@@ -175,7 +175,7 @@
         <div id="accordion">
             <div class="card">
                 <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#collapseService">Select service</a>
+                    <a class="card-link" data-toggle="collapse" href="#collapseService" title = "We offer four different haircut options, choose one">Select service</a>
                 </div>
                 <div id="collapseService" class="collapse show" data-parent="#accordion">
                     <div class="card-body">
@@ -209,15 +209,15 @@
                <!-- lab 5 requiremetn select barber !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                <div class="card">
                 <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseBarber">Select Barber
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseBarber" title = "We have two barbers, Anna and James">Select Barber
                         </a>
                 </div>
                 <div id="collapseBarber" class="collapse" data-parent="#accordion">
                     <div class="card-body">
                         <div class="container-md p-1 my-3 border">
                             <label>
-                                <input type="radio" name="barber" value="Jules">
-                                Jules
+                                <input type="radio" name="barber" value="Anna">
+                                Anna
                             </label>
                         </div>
                         <div class="container-md p-1 my-3 border">
@@ -232,7 +232,7 @@
             </div>
                 <div class="card">
                     <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date &
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate" title = "Please choose a time between 10 AM to 8 PM on weekdays and 11 AM to 5 PM on Saturday (closed on Sunday)">Choose a date &
                             time</a>
                     </div>
                     <div id="collapseDate" class="collapse" data-parent="#accordion">
@@ -250,7 +250,7 @@
                 </div>
                 <div class="card">
                     <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your Contact
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo" title = "Your full name, email address, and phone number must be provided" >Your Contact
                             Information</a>
                     </div>
                     <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
@@ -273,8 +273,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone"
-                                        placeholder="Enter your phone number">
+                                    <input type="tel" class="form-control" id="phone" placeholder = "Enter your phone number" minlength = "10" maxlength ="14" oninput="javascript: if(this.value.length > this.maxlength) this.value = this.value.slice(0, this.maxLength);" required>
+                                    <script>
+                                        document.getElementById('phone').addEventListener('input', function (e){
+                                            e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{3})/g, '$1 ').trim();
+                                        });
+                                    </script>
                                 </div>
                             </form>
                         </div>
@@ -283,7 +287,7 @@
 <!-- payment enter here for lab 5 requirem,etns  -->
 <div class="card">
     <div class="card-header">
-        <a class="collapsed card-link" data-toggle="collapse" href="#collapsePaymentInfo">Enter Payment Information</a>
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapsePaymentInfo" title = "Please ensure to pay using credit/debit card">Enter Payment Information</a>
     </div>
     <div id="collapsePaymentInfo" class="collapse" data-parent="#accordion">
         <div class="card-body" id="services">
