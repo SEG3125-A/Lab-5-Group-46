@@ -273,8 +273,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone"
-                                        placeholder="Enter your phone number">
+                                    <input type="tel" class="form-control" id="phone" placeholder = "Enter your phone number" minlength = "10" maxlength ="14" oninput="javascript: if(this.value.length > this.maxlength) this.value = this.value.slice(0, this.maxLength);" required>
+                                    <script>
+                                        document.getElementById('phone').addEventListener('input', function (e){
+                                            e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{3})/g, '$1 ').trim();
+                                        });
+                                    </script>
                                 </div>
 
                             </form>
