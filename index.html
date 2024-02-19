@@ -276,10 +276,7 @@
                                     <input type="tel" class="form-control" id="phone"
                                         placeholder="Enter your phone number">
                                 </div>
-
                             </form>
-                            <button type="submit" class="btn btn-primary" id="submit"
-                                onclick="submitinfo()">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -336,7 +333,7 @@
            
             <!-- end credit card infop validation  -->
             <button type="submit" class="btn btn-primary" id="submit"
-                onclick="submitinfo()">Submit</button>
+                onclick="submitinfo()" disabled>Submit</button>
         </div>
     </div>
 </div>
@@ -352,8 +349,12 @@
         var email = document.getElementById('email').value;
         var phone = document.getElementById('phone').value;
         var barberSelected = document.querySelector('input[name="barber"]:checked');
+        var ccNumber = document.getElementById('ccnumber').value; 
+        var cvvNumber = document.getElementById('cvvnumber').value; 
+        var expiryDate = document.getElementById('expirydate').value;
         var submitBtn = document.getElementById('submit');
-        if (serviceSelected && dateTimeInput && firstName && lastName && email && phone) {
+        if (serviceSelected && dateTimeInput && firstName && lastName && email && phone && 
+        barberSelected && ccNumber && cvvNumber && expiryDate) {
             submitBtn.disabled = false;
         } else {
             submitBtn.disabled = true;
